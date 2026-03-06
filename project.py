@@ -19,9 +19,9 @@ def list_users():
     os.system("cut -d: -f1 /etc/passwd")
 
 def add_group():
-    groupname = input("ادخل اسم الجروب الجديد: ")
+    groupname = input("Enter The new group name: ")
     os.system(f"sudo groupadd {groupname}")
-    print(f"تم إضافة الجروب {groupname}")
+    print(f"Group has been added {groupname}")
 
 def list_groups():
     os.system("cut -d: -f1 /etc/group")
@@ -52,11 +52,12 @@ def main_menu():
         elif choice == "6":
             list_groups()
         elif choice == "0":
-            print("خروج...")
+            print("Exit...")
             break
         else:
-            print("اختيار غير صحيح!")
+            print("Wrong Choice!")
 
 if __name__ == "__main__":
     main_menu()
+
 
